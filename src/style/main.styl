@@ -1,0 +1,397 @@
+/*  <fonts>  */
+@font-face
+	font-family 'Sregular'
+	src url('../fonts/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/SFUIDisplay-Regular.otf') format('opentype'),
+		 url('../fonts/SFUIDisplay-Regular.woff') format('woff'),
+		 url('../fonts/SFUIDisplay-Regular.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplay-Regular.svg#SFUIDisplay-Semibold') format('svg');
+	font-weight normal
+	font-style normal
+@font-face
+	font-family 'Smedium'
+	src url('../fonts/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/SFUIDisplay-Medium.otf')  format('opentype'),
+		 url('../fonts/SFUIDisplay-Medium.woff') format('woff'),
+		 url('../fonts/SFUIDisplay-Medium.ttf')  format('truetype'),
+		 url('../fonts/SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
+	font-weight normal
+	font-style normal
+@font-face
+	font-family 'Sbold'
+	src url('../fonts/SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/SFUIDisplay-Bold.otf') format('opentype'),
+		 url('../fonts/SFUIDisplay-Bold.woff') format('woff'), url('SFUIDisplay-Bold.ttf') format('truetype'),
+		 url('../fonts/SFUIDisplay-Bold.svg#SFUIDisplay-Bold') format('svg');
+	font-weight normal
+	font-style normal;
+/*  <fonts>  */
+
+/*  <vars>  */
+$bdrs = 5px;
+$bgc = #fafafa;
+/*  </vars>  */
+
+/*  <general>  */
+body
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	flex-direction column
+	color #535353
+	font normal 1.5rem/1.3 Sregular, sans-serif;
+	background-color #fff
+	/*font-size-adjust .5*/
+:-moz-placeholder
+	opacity 1
+	color currentColor
+:-ms-input-placeholder
+	opacity: 1
+	color currentColor
+a
+	color inherit
+	font inherit
+	text-decoration none
+	transition all .2s
+	&:hover
+		text-decoration underline
+.main
+	flex 1
+	background-color $bgc
+	padding-bottom 65px
+@keyframes fade {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+/*  </general>  */
+
+/*  <header>  */
+.header
+	flex-shrink 0
+	height 188px
+	background-color #1364af
+.header__rates
+	height 44px
+	background-color #10599d
+.header-rates__wrap
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	align-items center
+	height 44px
+	color #87bff4
+.header__logo
+	position absolute
+	top 46px
+	left 15px
+	color #fff
+	font-size 3.5rem
+	font-family: Sbold
+	&:hover
+		text-decoration none
+.header__logo-name
+	vertical-align middle
+	line-height 1
+	margin-left 5px
+.header__logo-zone
+	vertical-align 8px
+	color #8bbae6
+	font-size 1.5rem
+.header__phone
+	position absolute
+	top 48px
+	left 380px
+	color #fff
+	&:before
+		position absolute
+		top 4px
+		left -25px
+		width 15px
+		height 15px
+		background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEnRSTlMATQMyDkkbOBVEQSYjCwg/KhN13+VMAAAAWElEQVQI112OSQ6AMAwDM+lGV+D/n0UVqAu+TRxbFhEbvCyyDo6FE5AWmy4dfHQ0ux90sjrY+g2Ylev/oYCzvcnrSLisBWJ9KwOfYtsOc3iGfVfz5rxukQeRywGRoQpICwAAAABJRU5ErkJggg==")
+		content ''
+.header__phone-number
+	font-size 1.7rem
+	font-family Smedium
+.header__phone-descr
+	font-size 1.4rem
+	margin-top 8px
+.header__contacts
+	position absolute
+	top 44px
+	left 670px
+	color #fff
+	font-size 1.7rem
+	font-family Smedium
+.header-contacts__jabber
+	position relative
+	margin 0 0 10px
+	&:before
+		position absolute
+		top 50%
+		left -26px
+		width 13px
+		height 19px
+		background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAATCAMAAAB86XelAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEXRSTlMABDUvFRgJIBA6RCtGJB1AS3xYOmYAAACCSURBVBjTTY5ZDgQhCERZpAHXvv9px4o9ifyQJ68QIjJdK8dDqEfebEN7b7xJauCRvedG28qRqtJV5S03itw0KwLlr9YN0lyFP4rkZonNKpgxuWLUAzkKiNGdCAHGFdWxNpnQlqGFiJXCeb7xZu4R3xk2VNWjHdItWnnmIZ6qY/CBH7QWAzvrDyBPAAAAAElFTkSuQmCC")				
+		content ''
+		transform translateY(-50%)
+.header-contacts__tg
+	position relative
+	margin 0
+	&:before
+		position absolute
+		top 50%
+		left -30px
+		width 18px
+		height 18px
+		background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEnRSTlMARgg+EkMxSwQXNiYcOiIqDiDrtDrQAAAAoUlEQVQY01WQWbIFIQhDExCctXv/m33q6zvlA4oTq4jgV8E5fsDlLJNfQGbUjPxBqdJaAry8wE0bkADY/U+asgpyTQgMG2SlCzB2qZqA0KNfy5hdVi2+vFj2Uykqu1kDYj2JzOREjas5Z5BGXtiq/axXWowZRzqfjymjn93Cx4KOrOwrezZ5kJflq7GW/j4Jr5tJhsWGl7pyD0m+Lmf+Gf4AznwEPN45d1MAAAAASUVORK5CYII=")
+		content ''
+		transform translateY(-50%)
+.header__cabinet-link
+	position absolute
+	top 42px
+	right 15px
+	color #fff
+	font-size 1.7rem
+	font-family Smedium
+	line-height 46px
+	background #2f78bb url("../i/icons/icon-header-login.png") no-repeat 26px center
+	border-radius $bdrs
+	padding 0 32px 0 60px
+	&:hover
+		text-decoration none
+		background-color darken(#2f78bb, 3)
+/*  </header>  */
+
+/*  <footer>  */
+.footer
+	flex-shrink 0
+	height 80px
+	color #000
+	font-size 1.6rem
+	font-family 'Open Sans'
+	background-color $bgc
+.footer__wrap
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	align-items center
+	height 80px
+.footer__logo
+	margin-right 18px
+.footer__nav
+	flex:1
+	text-align right
+.footer-nav__item
+	margin-left 45px
+/*  </footer>  */
+
+/*  <change>  */
+.change
+	position relative
+	&:before
+		position absolute
+		top 0
+		right 0
+		left 0
+		z-index 0
+		height 158px
+		background-color #1364af
+		content ''
+.change-cols
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	position relative
+.change-col
+	width 362px
+	background-color #fff
+	border-radius $bdrs
+	padding 25px 30px 44px
+	box-shadow 0 1px 4px rgba(0, 0, 0, .2)
+	&:nth-child(2)
+		flex:1
+		margin 0 10px
+	&:nth-child(3)
+		width 330px
+.change__title
+	color #0d4c86
+	font-size 3.5rem
+	text-align center
+	margin 0 0 30px
+.change__title--give
+	background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeBAMAAADJHrORAAAALVBMVEUAAADJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uGA3fOiAAAADnRSTlMAgEAeCvPtz8Kkk2BPJ7D2RhsAAABXSURBVBjTY4ACFwZUMBOVy/1uAwr/6rtYZC5L3bvnDkh8rnfv3i1A4p8D8t8guMx5QP4zAzif4x0INMD5cmD+QyQD5EC8IcQ3UlJmoA0QRAUM71ABOh8Aik9Q48ohqe8AAAAASUVORK5CYII=") no-repeat 7px center
+.change__title--get
+	background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeBAMAAADJHrORAAAALVBMVEUAAADJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uHJ1uGA3fOiAAAADnRSTlMAgEAeCvPtz8Kkk2BPJ7D2RhsAAABXSURBVBjTYyAOGCkpo/Dl3j0cQny5dyCAEOEA8xvgfOY8IPeZAULDOSD/DZIBXED+AiQ+S9275w7I9l19F4tiP/e7DagBOBMtQF0YyASCqIDhHSpA5wMAKolQ4zc99OAAAAAASUVORK5CYII=") no-repeat 5px center
+.change__section-title
+	position relative
+	overflow hidden
+	color #535353
+	font-size 1.6rem
+	white-space nowrap
+	text-align center
+	margin-bottom 12px
+	&:before
+		position absolute
+		top 50%
+		right 0
+		left 0
+		height 1px
+		background-color #ececec
+		content ''
+	& span
+		position relative
+		background-color #fff
+		padding 0 22px
+.change-section__title-link
+	position absolute
+	top 0
+	right 0
+	color #5889c3
+	text-decoration underline
+	background-color #fff
+	padding-left 7px
+	&:hover
+		text-decoration none
+.change__section-title--get
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content space-between
+	margin 0 7px 10px
+	& span
+		padding 0
+	&:before
+		display none
+.change-col--data .change__section-title
+	color #000
+.change-currency
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	justify-content center
+	color #000
+	font-size 1.6rem
+	margin 18px 0 40px
+.change-curerency__radio
+	position absolute
+	left -9999px
+	& + label
+		position relative
+		line-height 1
+		padding-left 20px
+		margin 0 12px
+		cursor pointer
+		&:before
+			position absolute
+			top 3px
+			left 0
+			width 12px
+			height 12px
+			background-color #dfdfdf
+			border-radius 50%
+			content ''
+			transition all .2s
+	&:checked + label
+		cursor default
+		&:before
+			background-color #0888ff
+.change-system
+	overflow-y auto
+	max-height 575px
+	margin 0 -10px
+.change-system__row
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	position relative
+	color #000
+	font-size 1.6rem
+	line-height 1
+	border-radius $bdrs
+	padding 9px 17px 9px 42px
+	margin 5px 0
+	cursor pointer
+	transition all .2s
+	&:hover
+		color #fff
+		background-color #0888ff
+		.change-system__balance
+			color #fff
+.change-system__row--active
+	color #fff
+	background-color #0888ff
+	cursor default
+	.change-system__balance
+		color #fff
+.change-col--get .change-system__row
+	padding 9px 17px 9px 50px
+.change-system__icon
+	position absolute
+	top 50%
+	left 21px
+	margin-right 12px
+	transform translate(-50%, -50%)
+.change-col--get .change-system__icon
+	left 25px
+.change-system__name
+	flex 1
+	margin 0 15px 0 24px
+.change-system__balance
+	color #ababab
+.change__section
+	position relative
+	margin 5px 0 20px
+.change__section-input
+	padding 0 12px 0 42px
+.change__section-pic
+	position absolute
+	top 50%
+	left 21px
+	transform translate(-50%, -50%)
+.change__get
+	position relative
+	margin-top 60px
+	&:before
+		position absolute
+		top -20px
+		right 0
+		left 0
+		height 1px
+		background-color #e3e9f0
+		content ''
+	&:after
+		position absolute
+		top -24px
+		left 50%
+		width 9px
+		height @width
+		background-color #fff
+		border solid #e3e9f0
+		border-width 0 1px 1px 0
+		content ''
+		transform translateX(-50%) rotate(45deg)
+.change__total
+	text-align center
+	margin 35px 0 25px	
+/*  </change>  */
