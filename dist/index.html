@@ -291,8 +291,40 @@
 			</div>
 		</div>
 	</footer>
+	<div class="general-notice general-notice--error">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Ошибочное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
+	<div class="general-notice general-notice--success">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Успешное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<!--
+	пример вызова окна ошибки, разметка выше. При деплое удалить
+	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
+	<script>
+		(function($){
+			$('.js-general-notice-error').click(function(e) {
+				e.preventDefault();
+				$('.general-notice--error').addClass('general-notice--active');
+			});
+			$('.general-notice__close').click(function(e) {
+				e.preventDefault();
+				$(this).closest('.general-notice').removeClass('general-notice--active');
+			});
+		})(jQuery);
+	</script>
+	-->
 </body>
 </html>
