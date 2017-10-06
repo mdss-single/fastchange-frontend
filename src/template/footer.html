@@ -29,11 +29,8 @@
 			</div>
 		</div>
 	</div>
-	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
 	<!--
-	пример вызова окна ошибки, разметка выше. При деплое удалить
+	пример вызова окна ошибки, разметка выше. Перед продакшеном удалить
 	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
 	<script>
 		(function($){
@@ -48,5 +45,77 @@
 		})(jQuery);
 	</script>
 	-->
+	<!--
+	<a href="#refill" class="js-modal">Вызов модального окна</a>
+	<div class="modal refill-request" id="refill">
+		<p class="refill-request__title">Заявка на пополнение резерва</p>
+		<div class="refill-request__descr">
+			Специально для Вас мы пополним резерв на необходимую сумму в ближайшее время. Наш менеджер с Вами свяжется в ближайшее время
+		</div>
+		<div class="refill-request__row">
+			<label for="r1" class="refill-request__row-title">Ваш e-mail</label>
+			<input type="email" name="" id="r1" class="input-text refill-request__input-email" value="admin_star@yandex.ru" autofocus>
+		</div>
+		<div class="refill-request__row">
+			<label for="r2" class="refill-request__row-title">Ваш номер телефона</label>
+			<input type="tel" name="" id="r2" class="input-text refill-request__input-phone" value="+7 (945) 456-67-67">
+		</div>
+		<div class="refill-request__row">
+			<label for="r3" class="refill-request__row-title">Необходимая сумма резерваа</label>
+			<input type="text" name="" id="r2" class="input-text refill-request__input-summ" value="350 000">
+		</div>
+		<button class="btn btn--fullwidth refill-request__btn">Отправить запрос</button>
+	</div>
+	-->
+	<!--
+	<a href="#exchange-finish" class="js-modal">Вызов модального окна</a>
+	<div class="modal exchange-finish" id="exchange-finish">
+		<p class="exchange-finish__title">Для завершения обмена следуйте инструкции</p>
+		<div class="exchange-finish__row">
+			Сделать перевод по реквизитам
+			<table class="exchange-finish__details">
+				<tr>
+					<td>Сумма:</td>
+					<td>1 Btc.</td>
+				</tr>
+				<tr>
+					<td>Кошелек:</td>
+					<td>1BoatSLRHtKNngkdXEeobR76b53LETtpyT</td>
+				</tr>
+				<tr>
+					<td>Назначение:</td>
+					<td>Личный перевод</td>
+				</tr>
+			</table>
+		</div>
+		<div class="exchange-finish__row">
+			После оплаты нажмите на кнопку “Я оплатил”
+		</div>
+		<div class="exchange-finish__btns">
+			<button class="btn btn--middle">Я оплатил</button>
+			<a href="#" class="exchange-finish__cancel" data-fancybox-close>Отмена</a>
+		</div>
+	</div>
+	-->
+	<!--
+	<a href="#requestComplete" class="js-modal">Вызов модального окна</a>
+	<div class="modal request-complete" id="requestComplete">
+		<p class="request-complete__title">Заявка №154672343 успешно создана и принята в обработку!</p>
+		<div class="request-complete__row">
+			В течении 20 минут, после поступления ваших денег на наш счет, она будет обработана и средства будут перечислены на указанный вами счет или кошелек.
+		</div>
+		<div class="request-complete__row">
+			Отслеживать ее статус Вы можете в своем личном кабинете. Пожалуйста убедитесь, что вы не только нажали на кнопку “Я оплатил”, но и действительно перевели к нас средства.
+		</div>
+		<div class="request-complete__row">
+			<p>По всем вопросам в случае задержки обмена, обращайтесь, в техническую поддержку.</p>
+			<p>С уваженем, администрация сайта!</p>
+		</div>
+		<button class="btn btn--middle request-complete__btn">Смотреть мои заявки</button>
+	</div>
+	-->
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

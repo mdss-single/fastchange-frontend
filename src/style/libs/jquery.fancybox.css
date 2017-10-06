@@ -162,7 +162,6 @@
 .fancybox-slide > div {
   display: inline-block;
   position: relative;
-  padding: 24px;
   margin: 44px 0 44px;
   border-width: 0;
   vertical-align: middle;
@@ -264,44 +263,48 @@
 
 .fancybox-close-small {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 44px;
-  height: 44px;
+  top: 18px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
   padding: 0;
   margin: 0;
-  border: 0;
-  border-radius: 0;
+  border: 2px solid #d2d2d2;
+  border-radius: 50%;
   outline: none;
   background: transparent;
   z-index: 10;
-  cursor: pointer; }
-
-.fancybox-close-small:after {
-  content: '×';
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 30px;
-  height: 30px;
-  font: 20px/30px Arial,"Helvetica Neue",Helvetica,sans-serif;
-  color: #888;
-  font-weight: 300;
-  text-align: center;
-  border-radius: 50%;
-  border-width: 0;
-  background: #fff;
-  transition: background .25s;
-  box-sizing: border-box;
-  z-index: 2; }
-
-.fancybox-close-small:focus:after {
-  outline: 1px dotted #888; }
-
-.fancybox-close-small:hover:after {
-  color: #555;
-  background: #eee; }
-
+  cursor: pointer;
+  transition:all .2s;
+  }
+.fancybox-close-small::before, .fancybox-close-small::after {
+  position:absolute;
+  top:15px; left:6px;
+  width:64%; height:2px;
+  background-color:#d2d2d2;
+  content:'';
+  -webkit-transition:all .2s;
+  -o-transition:all .2s;
+  transition:all .2s;
+}
+.fancybox-close-small::before {
+  -webkit-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+.fancybox-close-small::after {
+  -webkit-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+.fancybox-close-small:hover {
+  border-color:#000;
+}
+  .fancybox-close-small:hover::before, .fancybox-close-small:hover::after {
+    background-color:#000;
+  }
 .fancybox-slide--iframe .fancybox-close-small {
   top: 0;
   right: -44px; }

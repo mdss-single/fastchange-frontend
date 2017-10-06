@@ -1,4 +1,4 @@
-(function($){ 
+(function($){
 	"use strict";
 
 	$('.change-system .change-system__row').click(function() {
@@ -17,6 +17,17 @@
 		$('.change__section-give .change__section-input').val(changeGiveName);
 		$('.change__section-get .change__section-input').val(changeGetName);
 	}
+
+	$('.js-modal').fancybox({
+		touch: false,
+		lang : 'ru',
+		i18n : {
+			'ru' : {
+				CLOSE       : 'Закрыть',
+				ERROR       : 'Невозможно загрузить данные. Попробуйте еще раз.',
+			}
+        }
+	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
