@@ -121,10 +121,10 @@ gulp.task('watch', function() {
 	watch([path.watch.fonts], function(ev, callback) {
 		gulp.start('fonts:build');
 	});
-	watch([path.watch.fonts], function(ev, callback) {
+	watch([path.watch.cssLibs], function(ev, callback) {
 		gulp.start('cssLibs:build');
 	});
-	watch([path.watch.fonts], function(ev, callback) {
+	watch([path.watch.jsLibs], function(ev, callback) {
 		gulp.start('jsLibs:build');
 	});
 });
