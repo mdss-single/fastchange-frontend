@@ -29,6 +29,12 @@
         }
 	});
 
+	$('.js-exchange-creditcard').mask('0000 0000 0000 0000 00');
+
+	$('.faq__item-question').click(function() {
+		$(this).closest('.faq__item').toggleClass('faq__item--active').siblings().removeClass('faq__item--active');
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

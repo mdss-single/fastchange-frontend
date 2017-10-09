@@ -19,10 +19,14 @@
 						<div class="change__section-title"><span>Выберите систему:</span></div>
 						<div class="change-system change-system--give">
 							<!-- действие по клику строки change-system__row /js/main.js строка 4 -->
-							<div class="change-system__row change-system__row--active">
+							<div class="change-system__row change-system__row--active" data-notice>
 								<img src="i/pay/bitcoin-e.png" alt="" class="change-system__icon">
 								<span class="change-system__value">1.0000</span>
 								<span class="change-system__name">BTC-e USD</span>
+								<div class="change-system__notice">
+									<p class="change-system__notice-title">Уведомление!</p>
+									<div class="change-system__notice-descr">Требуется 2 подтверждения транзации от сети Bitcoin. Это может занять некоторое время.</div>
+								</div>
 							</div>
 							<div class="change-system__row">
 								<img src="i/pay/bitcoin-e.png" alt="" class="change-system__icon">
@@ -197,40 +201,41 @@
 					</div>
 					<div class="change-col change-col--data">
 						<p class="change__title">3. Данные</p>
-						<div class="change__section-title"><span>Отдаю:</span></div>
-						<div class="change__section change__section-give">
-							<input type="text" name="" id="" class="input-text change__section-input" disabled>
-							<img src="" alt="" class="change__section-pic">
-						</div>
-						<div class="change__section-title"><span>Сумма:</span></div>
-						<div class="change__section">
-							<input type="text" name="" id="" class="input-text" placeholder="от 20 USD">
-							<img src="" alt="">
-						</div>
-						<div class="change__section-title"><span>Код BTC-e</span></div>
-						<div class="change__section">
-							<input type="text" name="" id="" class="input-text" placeholder="BTC-e USD xxxxxxx-.....">
-							<img src="" alt="" class="change__section-pic">
-						</div>
-						<div class="change__get">
-							<div class="change__section-title"><span>Получаю:</span></div>
-							<div class="change__section change__section-get">
+						<form action="" class="test">
+							<div class="change__section-title"><span>Отдаю:</span></div>
+							<div class="change__section change__section-give">
 								<input type="text" name="" id="" class="input-text change__section-input" disabled>
 								<img src="" alt="" class="change__section-pic">
 							</div>
-							<div class="change__section-title"><span>Сумма:</span><a href="#" class="change-section__title-link">Мало?</a></div>
+							<div class="change__section-title"><span>Сумма:</span></div>
 							<div class="change__section">
-								<input type="text" name="" id="" class="input-text" placeholder="макс 1525107.836... ">
+								<input type="tel" name="" id="" class="input-text" placeholder="от 20 USD">
 								<img src="" alt="">
 							</div>
-							<div class="change__section-title"><span>Номер карты</span></div>
+							<div class="change__section-title"><span>Код BTC-e</span></div>
 							<div class="change__section">
-								<input type="text" name="" id="" class="input-text" placeholder="16 или 18 цифр ">
-								<img src="" alt="">
+								<input type="text" name="" id="" class="input-text" placeholder="BTC-e USD xxxxxxx-.....">
+								<img src="" alt="" class="change__section-pic">
 							</div>
-						</div>
-						<div class="change__total">1 ВTC-e USD  = QIWI 59.0726 руб.</div>
-						<button class="btn btn--fullwidth">Продолжить</button>
+							<div class="change__get">
+								<div class="change__section-title"><span>Получаю:</span></div>
+								<div class="change__section change__section-get">
+									<input type="text" name="" id="" class="input-text change__section-input" disabled>
+									<img src="" alt="" class="change__section-pic">
+								</div>
+								<div class="change__section-title"><span>Сумма:</span><a href="#" class="change-section__title-link">Мало?</a></div>
+								<div class="change__section">
+									<input type="tel" name="" id="" class="input-text" placeholder="макс 1525107.836... ">
+									<img src="" alt="">
+								</div>
+								<div class="change__section-title"><span>Номер карты</span></div>
+								<div class="change__section">
+									<input type="tel" name="" id="" class="input-text js-exchange-creditcard" placeholder="16 или 18 цифр">
+								</div>
+							</div>
+							<div class="change__total">1 ВTC-e USD  = QIWI 59.0726 руб.</div>
+							<button class="btn btn--fullwidth">Продолжить</button>
+						</form>
 					</div>
 				</div>
 			</div>
