@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Helper</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<style>
+		table {
+			width:100%;
+			margin-bottom:20px;
+		}
+			table th {
+				font-weight:bold;
+				text-align:left;
+			}
+			table th, table td {
+				vertical-align:top;
+				border:1px solid #dfe2e5;
+				padding:8px 12px;
+			}
+			.elements td:first-child {
+				width:20%;
+			}
+			.elements td:last-child {
+				width:40%;
+			}
+			.elements td:nth-of-type(2) {
+				width:40%;
+			}
+		h2 {
+			font-weight:300;
+			font-size:2.6rem;
+			margin:20px 0 10px;
+		}
+		code {
+			font-family:"Courier New", Courier, monospace, sans-serif;
+			text-align:left;
+			color:#555;
+			background:#eaeaea;
+			border-radius:3px;
+		}
+			pre {
+				background:#eaeaea;
+			}
+		.overflow {
+			max-width:600px;
+		}
+			.overflow pre {
+				padding:15px 5px;
+				margin:0 0 10px;
+			}
+				.overflow pre:last-child {
+					margin:0;
+				}
+	</style>
+</head>
+<body>
+	<div class="full">
+		<h2>Основные классы</h2>
+		<table>
+			<tr>
+				<td><code>.tl</code></td>
+				<td>text-align:left</td>
+			</tr>
+			<tr>
+				<td><code>.tc</code></td>
+				<td>text-align:center</td>
+			</tr>
+			<tr>
+				<td><code>.tr</code></td>
+				<td>text-align:right</td>
+			</tr>
+			<tr>
+				<td><code>.rel</code></td>
+				<td>position:relative</td>
+			</tr>
+			<tr>
+				<td><code>.abs</code></td>
+				<td>position:absolute</td>
+			</tr>
+			<tr>
+				<td><code>.hide</code></td>
+				<td>display:none !important</td>
+			</tr>
+			<tr>
+				<td><code>.form__row</code></td>
+				<td>Задает отступ снизу</td>
+			</tr>
+		</table>
+		<h2>Основные элементы</h2>
+		<table class="elements">
+			<tr>
+				<td><code>.input-text</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="text" name="" id="" class="input-text" placeholder="Input text"></code></pre>
+						<pre><code>&lt;input type="email" name="" id="" class="input-text" placeholder="Input email"></code></pre>
+						<p>При указании типа поля email на мобильном устройстве будет вызвана клавиатура для ввода email. Обычно она отличается только наличием символа @</p>
+						<pre><code>&lt;input type="tel" name="" id="" class="input-text" placeholder="Input tel"></code></pre>
+						<pre><code>&lt;input type="number" name="" id="" class="input-text" placeholder="Input number"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text" placeholder="Input"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--email</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="text" name="" id="" class="input-text input-text--email" placeholder="Input text"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text input-text--email" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--phone</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="tel" name="" id="" class="input-text input-text--phone" placeholder="Input text"></code></pre>
+					</div>
+					<p>При указании типа поля tel на мобильном устройстве будет вызвана не обычная клавиатура, а циферная для набора номера</p>
+				</td>
+				<td><input type="tel" name="" id="" class="input-text input-text--phone" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--summ</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="tel" name="" id="" class="input-text input-text--summ" placeholder="Input text"></code></pre>
+					</div>
+					<p>При указании типа поля tel на мобильном устройстве будет вызвана не обычная клавиатура, а циферная для набора номера</p>
+					<p>Так удобнее вводить сумму</p>
+				</td>
+				<td><input type="tel" name="" id="" class="input-text input-text--summ" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--password</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="password" name="" id="" class="input-text input-text--password" placeholder="Input text"></code></pre>
+					</div>
+				</td>
+				<td><input type="password" name="" id="" class="input-text input-text--password" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.textarea</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text">&lt;/textarea></code></pre>
+					</div>
+				</td>
+				<td><textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Some text"></textarea></td>
+			</tr>
+			<tr>
+				<td><code>.btn</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn">Button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn">Button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--middle</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--middle">Middle button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn btn--middle">Middle button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--small</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--small">Small button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn btn--small">Small button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--fullwidth</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--fullwidth">Fullwidth button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn btn--fullwidth">Fullwidth button</button></td>
+			</tr>
+			<tr>
+				<td><code>.btn .btn--small .btn--fullwidth</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;button class="btn btn--small btn--fullwidth">Combined button&lt;/button></code></pre>
+					</div>
+				</td>
+				<td><button class="btn btn--small btn--fullwidth">Combined button</button></td>
+			</tr>
+			<tr>
+				<td><code>.page__title</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;p class="page__title">Заголовок&lt;/p></code></pre>
+					</div>
+				</td>
+				<td><p class="page__title">Заголовок</p></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
