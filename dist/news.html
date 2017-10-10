@@ -37,6 +37,12 @@
 				<p class="header-contacts__tg"><a href="tg://resolve?domain=cashbank_bot">@cashbank_bot</a></p>
 			</div>
 			<a href="#" class="header__cabinet-link">Мой кабинет</a>
+			<!--
+			<div class="header__cabinet">
+				Михаил
+				<a href="#" class="header__cabinet-logout">Выйти</a>
+			</div>
+			-->
 		</div>
 	</header>
 	<main class="main">
@@ -100,22 +106,6 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	пример вызова окна ошибки, разметка выше. Перед продакшеном удалить
-	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
-	<script>
-		(function($){
-			$('.js-general-notice-error').click(function(e) {
-				e.preventDefault();
-				$('.general-notice--error').addClass('general-notice--active');
-			});
-			$('.general-notice__close').click(function(e) {
-				e.preventDefault();
-				$(this).closest('.general-notice').removeClass('general-notice--active');
-			});
-		})(jQuery);
-	</script>
-	-->
 	<!--
 	<a href="#refill" class="js-modal">Вызов модального окна</a>
 	<div class="modal refill-request" id="refill">
@@ -188,5 +178,21 @@
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<!--
+	пример вызова окна ошибки, разметка выше. Перед продакшеном удалить
+	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
+	<script>
+		(function($){
+			$('.js-general-notice-error').click(function(e) {
+				e.preventDefault();
+				$('.general-notice--error').addClass('general-notice--active');
+			});
+			$('.general-notice__close').click(function(e) {
+				e.preventDefault();
+				$(this).closest('.general-notice').removeClass('general-notice--active');
+			});
+		})(jQuery);
+	</script>
+	-->
 </body>
 </html>

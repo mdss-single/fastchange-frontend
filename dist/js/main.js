@@ -35,6 +35,8 @@
 		$(this).closest('.faq__item').toggleClass('faq__item--active').siblings().removeClass('faq__item--active');
 	});
 
+	$('.select').styler();
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);

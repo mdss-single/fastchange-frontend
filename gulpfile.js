@@ -43,7 +43,7 @@ var path = {
 gulp.task('webserver', function() {
 	browserSync({
 		server: {
-			baseDir: './build'
+			baseDir: './dist'
 		},
 		host: 'localhost',
 		port: 3000,
