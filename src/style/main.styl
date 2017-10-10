@@ -1180,4 +1180,84 @@ a
 			border solid #9fbdf2
 			border-width 1px 0
 			padding 0 38px 0 18px
+	&__list
+		width 100%
+		color #000
+		font-size 1.7rem
+		tr
+			border-bottom 1px solid #dadada
+			&:last-child
+				border-bottom 0
+		th
+			font-weight normal
+			font-family Smedium
+		th
+		td
+			text-align right
+			padding 15px
+			&:first-child
+				width 50%
+				text-align left
+				padding-left 0
+			&:last-child
+				padding-right 0
 /*  </referal>  */
+
+/*  <promo>  */
+.promo
+	margin-top 50px
+	&__title
+		color #000
+		font-size 3rem
+		margin 0 0 40px
+	&__descr
+		color #000
+		font-size 1.7rem
+		line-height 2.5rem
+		margin-bottom 60px
+		p
+			margin 0
+	&__tabs
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content flex-start
+		&-item
+			color #2d60c2
+			font-size 2.1rem
+			border-bottom 2px dotted @color
+			margin-right 25px
+			cursor pointer
+			&--active
+				color #000
+				font-family Smedium
+				border-bottom 0
+				cursor default
+	&__content
+		display none
+		&--active
+			display block
+			animation fade .5s
+			margin-top 20px
+		&-pic
+			background-color #f1f4fa
+			margin-bottom 30px
+		&-title
+			color #000
+			font-size 1.7rem
+			margin 0 0 10px
+		&-code
+			color #2d71e9
+			font-size 1.7rem
+			line-height 3rem
+			background-color #f1f4fa
+			border solid #9fbdf2
+			border-width 1px 0
+			padding 15px 20px
+			pre
+			code
+				font-family Smedium
+				margin 0
+/*  </promo>  */

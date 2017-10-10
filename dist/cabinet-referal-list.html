@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FastChange.pro</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/plugins.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__rates">
+			<div class="full">
+				<div class="header-rates__wrap">
+					<div class="header-rates__item">1 USD = 62.87 RUB</div>
+					<div class="header-rates__item">1 BTC = 157500.8271 RUB</div>
+					<div class="header-rates__item">1 ETH = 12497.9233 RUB</div>
+					<div class="header-rates__item">1 LTC = 3034.1574 RUB</div>
+					<div class="header-rates__item">1 DSH = 10665.0781 RUB</div>
+					<div class="header-rates__item">1 NVC = 42.0098 RUB</div>
+				</div>
+			</div>
+		</div>
+		<div class="full rel">
+			<a href="#" class="header__logo">
+				<img src="i/header__logo.png" alt="">
+				<span class="header__logo-name">Fastchange</span>
+				<span class="header__logo-zone">pro</span>
+			</a>
+			<div class="header__phone">
+				<a href="tel:+78007077649" class="header__phone-number">8 (800) 707-76-49</a>
+				<p class="header__phone-descr">10:00 - 23:00, ежедневно (мск)</p>
+			</div>
+			<div class="header__contacts">
+				<p class="header-contacts__jabber"><a href="xmpp:cashbank@jabber.ru?message">cashbank@jabber.ru</a></p>
+				<p class="header-contacts__tg"><a href="tg://resolve?domain=cashbank_bot">@cashbank_bot</a></p>
+			</div>
+			<a href="#" class="header__cabinet-link">Мой кабинет</a>
+			<!--
+			<div class="header__cabinet">
+				Михаил
+				<a href="#" class="header__cabinet-logout">Выйти</a>
+			</div>
+			-->
+		</div>
+	</header>
+	<main class="main">
+		<div class="cabinet__header">
+			<nav class="cabinet__nav full">
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--requests">Мои заявки</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--cards">Мои карты</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--referal cabinet-nav__item--active">Реферальная программа</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--promo">Промо материалы</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--settings">Настройки</a>
+			</nav>
+		</div>
+		<div class="full">
+			<div class="referal">
+				<p class="referal__title">Список моих рефералов</p>
+				<table class="referal__list">
+					<tr>
+						<th>Логин</th>
+						<th>Заказы</th>
+						<th>Оборот</th>
+						<th>Мои отчисления</th>
+					</tr>
+					<tr>
+						<td>pafno@ya.ru</td>
+						<td>30</td>
+						<td>1 200 000 RUB</td>
+						<td>1200 RUB</td>
+					</tr>
+					<tr>
+						<td>pafno@ya.ru</td>
+						<td>30</td>
+						<td>1 200 000 RUB</td>
+						<td>1200 RUB</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="full">
+			<div class="footer__wrap">
+				<a href="#" class="footer__logo"><img src="i/footer__logo.png" alt="Fastchange.pro"></a>
+				<div class="footer__copyright">© 2017, FastChange.pro — единый обмен валюты</div>
+				<nav class="footer__nav">
+					<a href="#" class="footer-nav__item">Правила обмена</a>
+					<a href="#" class="footer-nav__item">Партнерам</a>
+					<a href="#" class="footer-nav__item">Новости</a>
+					<a href="#" class="footer-nav__item">FAQ</a>
+					<a href="#" class="footer-nav__item">Контакты</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<div class="general-notice general-notice--error">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Ошибочное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
+	<div class="general-notice general-notice--success">
+		<div class="full">
+			<div class="general-notice__wrap">
+				Успешное действие
+				<a href="#" class="general-notice__close"></a>
+			</div>
+		</div>
+	</div>
+	<!--
+	<a href="#refill" class="js-modal">Вызов модального окна</a>
+	<div class="modal refill-request" id="refill">
+		<p class="refill-request__title">Заявка на пополнение резерва</p>
+		<div class="refill-request__descr">
+			Специально для Вас мы пополним резерв на необходимую сумму в ближайшее время. Наш менеджер с Вами свяжется в ближайшее время
+		</div>
+		<div class="refill-request__row">
+			<label for="r1" class="refill-request__row-title">Ваш e-mail</label>
+			<input type="email" name="" id="r1" class="input-text input-text--email refill-request__input" value="admin_star@yandex.ru" autofocus>
+		</div>
+		<div class="refill-request__row">
+			<label for="r2" class="refill-request__row-title">Ваш номер телефона</label>
+			<input type="tel" name="" id="r2" class="input-text input-text--phone refill-request__input" value="+7 (945) 456-67-67">
+		</div>
+		<div class="refill-request__row">
+			<label for="r3" class="refill-request__row-title">Необходимая сумма резерваа</label>
+			<input type="text" name="" id="r2" class="input-text input-text--summ refill-request__input" value="350 000">
+		</div>
+		<button class="btn btn--fullwidth refill-request__btn">Отправить запрос</button>
+	</div>
+	-->
+	<!--
+	<a href="#exchange-finish" class="js-modal">Вызов модального окна</a>
+	<div class="modal exchange-finish" id="exchange-finish">
+		<p class="exchange-finish__title">Для завершения обмена следуйте инструкции</p>
+		<div class="exchange-finish__row">
+			Сделать перевод по реквизитам
+			<table class="exchange-finish__details">
+				<tr>
+					<td>Сумма:</td>
+					<td>1 Btc.</td>
+				</tr>
+				<tr>
+					<td>Кошелек:</td>
+					<td>1BoatSLRHtKNngkdXEeobR76b53LETtpyT</td>
+				</tr>
+				<tr>
+					<td>Назначение:</td>
+					<td>Личный перевод</td>
+				</tr>
+			</table>
+		</div>
+		<div class="exchange-finish__row">
+			После оплаты нажмите на кнопку “Я оплатил”
+		</div>
+		<div class="exchange-finish__btns">
+			<button class="btn btn--middle">Я оплатил</button>
+			<a href="#" class="exchange-finish__cancel" data-fancybox-close>Отмена</a>
+		</div>
+	</div>
+	-->
+	<!--
+	<a href="#requestComplete" class="js-modal">Вызов модального окна</a>
+	<div class="modal request-complete" id="requestComplete">
+		<p class="request-complete__title">Заявка №154672343 успешно создана и принята в обработку!</p>
+		<div class="request-complete__row">
+			В течении 20 минут, после поступления ваших денег на наш счет, она будет обработана и средства будут перечислены на указанный вами счет или кошелек.
+		</div>
+		<div class="request-complete__row">
+			Отслеживать ее статус Вы можете в своем личном кабинете. Пожалуйста убедитесь, что вы не только нажали на кнопку “Я оплатил”, но и действительно перевели к нас средства.
+		</div>
+		<div class="request-complete__row">
+			<p>По всем вопросам в случае задержки обмена, обращайтесь, в техническую поддержку.</p>
+			<p>С уваженем, администрация сайта!</p>
+		</div>
+		<button class="btn btn--middle request-complete__btn">Смотреть мои заявки</button>
+	</div>
+	-->
+	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<!--
+	пример вызова окна ошибки, разметка выше. Перед продакшеном удалить
+	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
+	<script>
+		(function($){
+			$('.js-general-notice-error').click(function(e) {
+				e.preventDefault();
+				$('.general-notice--error').addClass('general-notice--active');
+			});
+			$('.general-notice__close').click(function(e) {
+				e.preventDefault();
+				$(this).closest('.general-notice').removeClass('general-notice--active');
+			});
+		})(jQuery);
+	</script>
+	-->
+</body>
+</html>

@@ -37,6 +37,19 @@
 
 	$('.select').styler();
 
+	$('.promo__tabs').each(function(i) {
+		var storage = localStorage.getItem('tab' + i);
+		if (storage) {
+			$(this).find('div').removeClass('promo__tabs-item--active').eq(storage).addClass('promo__tabs-item--active').closest('.promo__main').find('.promo__content').removeClass('promo__content--active').eq(storage).addClass('promo__content--active');
+		}
+	});
+	$('.promo__tabs').on('click', 'div:not(.promo__tabs-item--active)', function() {
+		$(this).addClass('promo__tabs-item--active').siblings().removeClass('promo__tabs-item--active').closest('.promo__main').find('.promo__content').removeClass('promo__content--active').eq($(this).index()).addClass('promo__content--active');
+		var ulIndex = $('.promo__tabs').index($(this).parents('.promo__tabs'));
+		localStorage.removeItem('tab' + ulIndex);
+		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
