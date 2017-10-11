@@ -106,8 +106,6 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	<a href="#refill" class="js-modal">Вызов модального окна</a>
 	<div class="modal refill-request" id="refill">
 		<p class="refill-request__title">Заявка на пополнение резерва</p>
 		<div class="refill-request__descr">
@@ -127,9 +125,6 @@
 		</div>
 		<button class="btn btn--fullwidth refill-request__btn">Отправить запрос</button>
 	</div>
-	-->
-	<!--
-	<a href="#exchange-finish" class="js-modal">Вызов модального окна</a>
 	<div class="modal exchange-finish" id="exchange-finish">
 		<p class="exchange-finish__title">Для завершения обмена следуйте инструкции</p>
 		<div class="exchange-finish__row">
@@ -157,9 +152,6 @@
 			<a href="#" class="exchange-finish__cancel" data-fancybox-close>Отмена</a>
 		</div>
 	</div>
-	-->
-	<!--
-	<a href="#requestComplete" class="js-modal">Вызов модального окна</a>
 	<div class="modal request-complete" id="requestComplete">
 		<p class="request-complete__title">Заявка №154672343 успешно создана и принята в обработку!</p>
 		<div class="request-complete__row">
@@ -174,25 +166,8 @@
 		</div>
 		<button class="btn btn--middle request-complete__btn">Смотреть мои заявки</button>
 	</div>
-	-->
 	<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-	<!--
-	пример вызова окна ошибки, разметка выше. Перед продакшеном удалить
-	<a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a>
-	<script>
-		(function($){
-			$('.js-general-notice-error').click(function(e) {
-				e.preventDefault();
-				$('.general-notice--error').addClass('general-notice--active');
-			});
-			$('.general-notice__close').click(function(e) {
-				e.preventDefault();
-				$(this).closest('.general-notice').removeClass('general-notice--active');
-			});
-		})(jQuery);
-	</script>
-	-->
 </body>
 </html>

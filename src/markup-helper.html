@@ -1,14 +1,14 @@
 //= template/header.html
 	<style>
-		table {
+		.markup table {
 			width:100%;
 			margin-bottom:20px;
 		}
-			table th {
+			.markup table th {
 				font-weight:bold;
 				text-align:left;
 			}
-			table th, table td {
+			.markup table th, .markup table td {
 				vertical-align:top;
 				border:1px solid #dfe2e5;
 				padding:8px 12px;
@@ -22,33 +22,33 @@
 			.elements td:nth-of-type(2) {
 				width:40%;
 			}
-		h2 {
+		.markup h2 {
 			font-weight:300;
 			font-size:2.6rem;
 			margin:20px 0 10px;
 		}
-		code {
+		.markup code {
 			font-family:"Courier New", Courier, monospace, sans-serif;
 			text-align:left;
 			color:#555;
 			background:#eaeaea;
 			border-radius:3px;
 		}
-			pre {
+			.markup pre {
 				background:#eaeaea;
 			}
-		.overflow {
+		.markup .overflow {
 			max-width:600px;
 		}
-			.overflow pre {
+			.markup .overflow pre {
 				padding:15px 5px;
 				margin:0 0 10px;
 			}
-				.overflow pre:last-child {
+				.markup .overflow pre:last-child {
 					margin:0;
 				}
 	</style>
-	<div class="full">
+	<div class="full markup">
 		<h2>Основные классы</h2>
 		<table>
 			<tr>
@@ -87,6 +87,14 @@
 			<li><a href="http://dimox.name/jquery-form-styler/">jQuery Form Styler</a></li>
 			<li><a href="https://jqueryvalidation.org/documentation/">jQUery Validate</a></li>
 		</ol>
+		<h2>Модальные окна</h2>
+		<ul>
+			<li><a href="#refill" class="js-modal">Заявка на пополнение резерва</a></li>
+			<li><a href="#exchange-finish" class="js-modal">Для завершения обмена следуйте инструкции</a></li>
+			<li><a href="#requestComplete" class="js-modal">Заявка №154672343 успешно создана и принята в обработку!</a></li>
+			<li><a href="#" class="js-general-notice-error">Вызвать сообщение об ошибке</a></li>
+			<li><a href="#" class="js-general-notice-success">Вызвать сообщение об успехе</a></li>
+		</ul>
 		<h2>Основные элементы</h2>
 		<table class="elements">
 			<tr>
@@ -281,3 +289,19 @@
 		</table>
 	</div>
 //= template/footer.html
+<script>
+	(function($){
+		$('.js-general-notice-error').click(function(e) {
+			e.preventDefault();
+			$('.general-notice--error').addClass('general-notice--active');
+		});
+		$('.js-general-notice-success').click(function(e) {
+			e.preventDefault();
+			$('.general-notice--success').addClass('general-notice--active');
+		});
+		$('.general-notice__close').click(function(e) {
+			e.preventDefault();
+			$(this).closest('.general-notice').removeClass('general-notice--active');
+		});
+	})(jQuery);
+</script>
