@@ -201,36 +201,38 @@
 					</div>
 					<div class="change-col change-col--data">
 						<p class="change__title">3. Данные</p>
-						<form action="" class="test">
+						<form action="" class="exchange-form">
 							<div class="change__section-title"><span>Отдаю:</span></div>
 							<div class="change__section change__section-give">
-								<input type="text" name="" id="" class="input-text change__section-input" disabled>
+								<input type="text" class="input-text change__section-input" disabled>
 								<img src="" alt="" class="change__section-pic">
 							</div>
 							<div class="change__section-title"><span>Сумма:</span></div>
 							<div class="change__section">
-								<input type="tel" name="" id="" class="input-text" placeholder="от 20 USD">
+								<!-- валидация по имени поля, файл js/main.js 62, 72 -->
+								<input type="tel" name="exchangeValue" class="input-text" placeholder="от 20 USD" data-mask="0000000000">
 								<img src="" alt="">
 							</div>
 							<div class="change__section-title"><span>Код BTC-e</span></div>
 							<div class="change__section">
-								<input type="text" name="" id="" class="input-text" placeholder="BTC-e USD xxxxxxx-.....">
+								<input type="text" name="exchangeCode" class="input-text" placeholder="BTC-e USD xxxxxxx-.....">
 								<img src="" alt="" class="change__section-pic">
 							</div>
 							<div class="change__get">
 								<div class="change__section-title"><span>Получаю:</span></div>
 								<div class="change__section change__section-get">
-									<input type="text" name="" id="" class="input-text change__section-input" disabled>
+									<input type="text" class="input-text change__section-input" disabled>
 									<img src="" alt="" class="change__section-pic">
 								</div>
 								<div class="change__section-title"><span>Сумма:</span><a href="#" class="change-section__title-link">Мало?</a></div>
 								<div class="change__section">
-									<input type="tel" name="" id="" class="input-text" placeholder="макс 1525107.836... ">
+									<input type="tel" class="input-text" placeholder="макс 1525107.836..." disabled>
 									<img src="" alt="">
 								</div>
 								<div class="change__section-title"><span>Номер карты</span></div>
 								<div class="change__section">
-									<input type="tel" name="" id="" class="input-text js-creditcard-mask" placeholder="16 или 18 цифр">
+									<!-- валидация по имени поля, файл js/main.js 65, 75 -->
+									<input type="tel" name="exchangeCard" class="input-text js-creditcard-mask" placeholder="16 или 18 цифр" autocomplete="off">
 								</div>
 							</div>
 							<div class="change__total">1 ВTC-e USD  = QIWI 59.0726 руб.</div>

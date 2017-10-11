@@ -44,6 +44,8 @@
 		border-color #4c99e0
 	&--error
 		border-color #da4e52
+		&:focus
+			border-color @border-color
 	&--email
 		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAMAAACsjQ8GAAAAflBMVEUAAADa2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tra2tq7qwGyAAAAKXRSTlMAEfECrfvRIwic9uYnttrAiGVMOTEtGA/sgHjf3M3Jr6V1YVVDHMKSGyVrDs0AAAEMSURBVCjPhZJZcoMwEEQHLcjsxix2vK9J3v0vGBzsAgxx+ktSvxrVzLSIM4o/pIwTiRVvpGIxEMxkUrMAjCjAd1O+8wElkIeoxdhfKMIcBKTcwFwPbT2HTSktIF4CWd336wwST56A6A9LVHR+EWE/tHRA8+MKe9KP8ifLaiEyAMTt4OBJI+8AOycd0Os6LUXKtJ3MCJA1EJ7PIbCWCSCHrxXANoB8DFwsa/n+vHenA+zlFbha5r/zuXenj9jrEChCAt2boyEs+kClOOrBIhNU1QEuIpm9rDojck/glpKNIrHcs721gOezX8pIzbPvgSiaQy0TqtPGUmIgqrxWy0f1x7WKwPwfWonfxT6WHwkxL7By0zBnAAAAAElFTkSuQmCC')
 		background-repeat no-repeat
@@ -206,3 +208,35 @@ a.btn--small
 	background-color #fff
 	border-radius 5px
 /*  </modal>  */
+
+/*  <error>  */
+.input-text--error + div
+	position relative
+label.input-text--error
+	position absolute
+	z-index 100
+	width 100%
+	color #fff
+	font-size 1.4rem
+	font-family Sbold
+	line-height 1.8rem
+	background-color rgba(#d84449, .95)
+	border-radius 5px
+	padding 12px 18px
+	margin-top 16px
+	&:before
+		display block
+		font-size 1.3rem
+		font-family Sregular
+		margin-bottom 5px
+		content 'Ошибка!'
+	&:after
+		position absolute
+		top -6px
+		left 50%
+		border solid transparent
+		border-width 0 6px 6px
+		border-bottom-color rgba(#d84449, .95)
+		content ''
+		transform translateX(-50%)
+/*  </error>  */

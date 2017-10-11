@@ -19,25 +19,27 @@
 		</div>
 		<div class="modal card-add" id="cardAdd">
 			<p class="card-add__title">Добавить карту</p>
-			<div class="card-add__row">
-				<label for="ca1" class="form__label">Выберите банк:</label>
-				<select name="" id="ca1" class="select">
-					<option value="">Сбербанк</option>
-					<option value="">ВТБ 24</option>
-					<option value="">Промсвязьбанк</option>
-				</select>
-			</div>
-			<div class="card-add__row">
-				<label for="ca2" class="form__label">Введите ФИО владельца карты:</label>
-				<input type="text" name="" id="ca2" class="input-text input-text--user">
-			</div>
-			<div class="card-add__row">
-				<label for="ca3" class="form__label">Введите номер карты:</label>
-				<input type="text" name="" id="ca3" class="input-text input-text--card js-creditcard-mask">
-			</div>
-			<div class="card-add__btn">
-				<button class="btn btn--fullwidth">Далее</button>
-			</div>
+			<form action="" class="card-add__form">
+				<div class="card-add__row">
+					<label for="ca1" class="form__label">Выберите банк:</label>
+					<select name="cardAddBank" id="ca1" class="select">
+						<option value="">Сбербанк</option>
+						<option value="">ВТБ 24</option>
+						<option value="">Промсвязьбанк</option>
+					</select>
+				</div>
+				<div class="card-add__row">
+					<label for="ca2" class="form__label">Введите ФИО владельца карты:</label>
+					<input type="text" name="cardAddFIO" id="ca2" class="input-text input-text--user">
+				</div>
+				<div class="card-add__row">
+					<label for="ca3" class="form__label">Введите номер карты:</label>
+					<input type="text" name="cardAddNumber" id="ca3" class="input-text input-text--card js-creditcard-mask">
+				</div>
+				<div class="card-add__btn">
+					<button class="btn btn--fullwidth">Далее</button>
+				</div>
+			</form>
 		</div>
 		<div class="modal card-verification" id="cardVerification">
 			<p class="card-verification__title">Верификация карты</p>
@@ -60,5 +62,50 @@
 				<button class="btn">Отправить</button>
 			</div>
 		</div>
+		<!-- пример валидации формы и открытия окна верификации
+		<script>
+			(function($){
+				$('.card-add__form').validate({
+					rules: {
+						cardAddFIO: {
+							required: true
+						},
+						cardAddNumber: {
+							required: true,
+							minlength: 19,
+							maxlength: 22
+						}
+					},
+					messages: {
+						cardAddFIO: {
+							required: "Введите имя и фамилию"
+						},
+						cardAddNumber: {
+							required: "Вы ввели не правильный номер карты. Номер карты должен быть 16 или 18 цифр.",
+							minlength: "Вы ввели не правильный номер карты. Номер карты должен быть 16 или 18 цифр."
+						}
+					},
+					errorClass: "input-text--error",
+					wrapper: "div",
+					submitHandler: function(form) {
+						$.fancybox.close();
+						$.fancybox.open({
+							src: '#cardVerification',
+							opts: {
+								touch: false,
+								lang : 'ru',
+								i18n : {
+									'ru' : {
+										CLOSE: 'Закрыть',
+										ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
+									}
+								},
+							}
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+		-->
 	</main>
 //= template/footer.html

@@ -57,6 +57,30 @@
 		$('label[for="' + this.id + '"]').text($(this).val()).attr('title',$(this).val());
 	});
 
+	$('.exchange-form').validate({
+		rules: {
+			exchangeValue: {
+				required: true,
+			},
+			exchangeCard: {
+				required: true,
+				minlength: 19,
+				maxlength: 22
+			},
+		},
+		messages: {
+			exchangeValue: {
+				required: "Введите сумму",
+			},
+			exchangeCard: {
+				required: "Вы ввели не правильный номер карты. Номер карты должен быть 16 или 18 цифр.",
+				minlength: "Вы ввели не правильный номер карты. Номер карты должен быть 16 или 18 цифр."
+			}
+		},
+		errorClass: "input-text--error",
+		wrapper: "div",
+	});
+
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
