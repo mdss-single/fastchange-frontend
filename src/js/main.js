@@ -23,13 +23,16 @@
 		lang : 'ru',
 		i18n : {
 			'ru' : {
-				CLOSE       : 'Закрыть',
-				ERROR       : 'Невозможно загрузить данные. Попробуйте еще раз.',
+				CLOSE: 'Закрыть',
+				ERROR: 'Невозможно загрузить данные. Попробуйте еще раз.',
 			}
-        }
+		},
+		afterLoad: function() {
+			$('.select').trigger('refresh');
+		}
 	});
 
-	$('.js-exchange-creditcard').mask('0000 0000 0000 0000 00');
+	$('.js-creditcard-mask').mask('0000 0000 0000 0000 00');
 
 	$('.faq__item-question').click(function() {
 		$(this).closest('.faq__item').toggleClass('faq__item--active').siblings().removeClass('faq__item--active');
@@ -48,6 +51,10 @@
 		var ulIndex = $('.promo__tabs').index($(this).parents('.promo__tabs'));
 		localStorage.removeItem('tab' + ulIndex);
 		localStorage.setItem('tab' + ulIndex, $(this).index());
+	});
+
+	$('.input-file').change(function() {
+		$('label[for="' + this.id + '"]').text($(this).val()).attr('title',$(this).val());
 	});
 
 	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')

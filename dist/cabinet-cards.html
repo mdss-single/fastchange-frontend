@@ -56,48 +56,72 @@
 			</nav>
 		</div>
 		<div class="full">
-			<div class="promo">
-				<p class="promo__title">Список моих отчислений</p>
-				<div class="promo__descr">
-					<p>В данном разделе специально для партнеров и пользователей сервиса мы подготовили несколько вариантов баннеров.</p>
-					<p>Они стилизованы под наш бренд и удобны для рекламы и распространения в Интернете. В каждом баннере уже содержится Ваша персональная партнерская ссылка.</p>
-				</div>
-				<div class="promo__main">
-					<div class="promo__tabs">
-						<div class="promo__tabs-item promo__tabs-item--active">1000*1000</div>
-						<div class="promo__tabs-item">200*200</div>
-					</div>
-					<div class="promo__content promo__content--active">
-						<div class="promo__content-pic"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABmAQMAAAAwKmkoAAAAA1BMVEXx9Po+xBuGAAAAC0lEQVQI12MYRgAAAMwAAWn+wzkAAAAASUVORK5CYII=" alt=""></div>
-						<p class="promo__content-title">Код</p>
-						<div class="promo__content-code">
-							<pre><code>&lt;script type="text/javascript"&gt;
-	(function (d, w, c) {
-		(w[c] = w[c] || []).push(function() {
-			try {
-				id:17959234,
-			});
-		} catch(e) { }
-	});
-&lt;/script&gt;</code></pre>
-						</div>
-					</div>
-					<div class="promo__content promo__content">
-						<div class="promo__content-pic"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABmAQMAAAAwKmkoAAAAA1BMVEXx9Po+xBuGAAAAC0lEQVQI12MYRgAAAMwAAWn+wzkAAAAASUVORK5CYII=" alt=""></div>
-						<p class="promo__content-title">Код</p>
-						<div class="promo__content-code">
-							<pre><code>&lt;script type="text/javascript"&gt;
-	(function (d, w, c) {
-		(w[c] = w[c] || []).push(function() {
-			try {
-				id:17959234,
-			});
-		} catch(e) { }
-	});
-&lt;/script&gt;</code></pre>
-						</div>
-					</div>
-				</div>
+			<div class="cards">
+				<p class="cards__title">Список моих карт</p>
+				<table class="cards__list">
+					<tr>
+						<th>Дата добавления</th>
+						<th>Банк</th>
+						<th>Номер</th>
+						<th>Статус</th>
+					</tr>
+					<tr>
+						<td>02.12.2017</td>
+						<td>Сбербанк</td>
+						<td>0000 0000 0000 0000</td>
+						<td>Верифицированна</td>
+					</tr>
+					<tr>
+						<td>01.12.2017</td>
+						<td>Сбербанк</td>
+						<td>0000 0000 0000 0000</td>
+						<td>Проверяется</td>
+					</tr>
+				</table>
+				<button class="btn cards__btn js-modal" data-src="#cardAdd">Добавить карту</button>
+			</div>
+		</div>
+		<div class="modal card-add" id="cardAdd">
+			<p class="card-add__title">Добавить карту</p>
+			<div class="card-add__row">
+				<label for="ca1" class="form__label">Выберите банк:</label>
+				<select name="" id="ca1" class="select">
+					<option value="">Сбербанк</option>
+					<option value="">ВТБ 24</option>
+					<option value="">Промсвязьбанк</option>
+				</select>
+			</div>
+			<div class="card-add__row">
+				<label for="ca2" class="form__label">Введите ФИО владельца карты:</label>
+				<input type="text" name="" id="ca2" class="input-text input-text--user">
+			</div>
+			<div class="card-add__row">
+				<label for="ca3" class="form__label">Введите номер карты:</label>
+				<input type="text" name="" id="ca3" class="input-text input-text--card js-creditcard-mask">
+			</div>
+			<div class="card-add__btn">
+				<button class="btn btn--fullwidth">Далее</button>
+			</div>
+		</div>
+		<div class="modal card-verification" id="cardVerification">
+			<p class="card-verification__title">Верификация карты</p>
+			<div class="card-verification__descr">
+				<p>Для верификации необходимо сфотографировать только лицевую сторону Вашей карты на фоне нашего сайта.</p>
+				<p>Процесс верификации займет несколько минут и требуется лишь единожды на каждую новую карту.</p>
+			</div>
+			<div class="card-verification__requirement">
+				<p class="card-verification__requirement-title">Требование к фотографии:</p>
+				<ol class="card-verification__requirement-list">
+					<li>На фото должны читаться номер карты, имя владельца.</li>
+					<li>На заднем фоне (за картой) должен быть виден монитор с</li>
+				</ol>
+			</div>
+			<div class="card-verification__file">
+				<p class="card-verification__file-title">Нажмите чтобы выбрать:</p>
+				<input type="file" name="" id="ca4" class="input-file"><label for="ca4">Выбрать файл</label>
+			</div>
+			<div class="card-verification__btn">
+				<button class="btn">Отправить</button>
 			</div>
 		</div>
 	</main>
@@ -141,15 +165,15 @@
 		</div>
 		<div class="refill-request__row">
 			<label for="r1" class="refill-request__row-title">Ваш e-mail</label>
-			<input type="email" name="" id="r1" class="input-text input-text--email refill-request__input" value="admin_star@yandex.ru" autofocus>
+			<input type="email" name="" id="r1" class="input-text input-text--email" value="admin_star@yandex.ru" autofocus>
 		</div>
 		<div class="refill-request__row">
 			<label for="r2" class="refill-request__row-title">Ваш номер телефона</label>
-			<input type="tel" name="" id="r2" class="input-text input-text--phone refill-request__input" value="+7 (945) 456-67-67">
+			<input type="tel" name="" id="r2" class="input-text input-text--phone" value="+7 (945) 456-67-67">
 		</div>
 		<div class="refill-request__row">
 			<label for="r3" class="refill-request__row-title">Необходимая сумма резерваа</label>
-			<input type="text" name="" id="r2" class="input-text input-text--summ refill-request__input" value="350 000">
+			<input type="text" name="" id="r2" class="input-text input-text--summ" value="350 000">
 		</div>
 		<button class="btn btn--fullwidth refill-request__btn">Отправить запрос</button>
 	</div>

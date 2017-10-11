@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Helper</title>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/plugins.css">
+//= template/header.html
 	<style>
 		table {
 			width:100%;
@@ -54,8 +48,6 @@
 					margin:0;
 				}
 	</style>
-</head>
-<body>
 	<div class="full">
 		<h2>Основные классы</h2>
 		<table>
@@ -88,6 +80,13 @@
 				<td>Задает отступ снизу</td>
 			</tr>
 		</table>
+		<h2>Подключенные плагины</h2>
+		<ol>
+			<li><a href="https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html">jQuery Input Mask</a></li>
+			<li><a href="http://fancyapps.com/fancybox/3/docs/">jQuery Fancybox</a></li>
+			<li><a href="http://dimox.name/jquery-form-styler/">jQuery Form Styler</a></li>
+			<li><a href="https://jqueryvalidation.org/documentation/">jQUery Validate</a></li>
+		</ol>
 		<h2>Основные элементы</h2>
 		<table class="elements">
 			<tr>
@@ -102,6 +101,19 @@
 					</div>
 				</td>
 				<td><input type="text" name="" id="" class="input-text" placeholder="Input"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--error</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="text" name="" id="" class="input-text input-text--error" placeholder="Input text"></code></pre>
+						<pre><code>&lt;input type="email" name="" id="" class="input-text input-text--error" placeholder="Input email"></code></pre>
+						<p>При указании типа поля email на мобильном устройстве будет вызвана клавиатура для ввода email. Обычно она отличается только наличием символа @</p>
+						<pre><code>&lt;input type="tel" name="" id="" class="input-text input-text--error" placeholder="Input tel"></code></pre>
+						<pre><code>&lt;input type="number" name="" id="" class="input-text input-text--error" placeholder="Input number"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text input-text--error" placeholder="Error input"></td>
 			</tr>
 			<tr>
 				<td><code>.input-text .input-text--email</code></td>
@@ -141,6 +153,67 @@
 					</div>
 				</td>
 				<td><input type="password" name="" id="" class="input-text input-text--password" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--user</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="password" name="" id="" class="input-text input-text--user" placeholder="Input text"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text input-text--user" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.input-text .input-text--card</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="password" name="" id="" class="input-text input-text--card" placeholder="Input text"></code></pre>
+					</div>
+				</td>
+				<td><input type="text" name="" id="" class="input-text input-text--card" placeholder="Input text"></td>
+			</tr>
+			<tr>
+				<td><code>.select</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;select name="" id="" class="select">
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+&lt;/select></code></pre>
+					</div>
+				</td>
+				<td><select name="" id="" class="select">
+					<option value="">Option 1</option>
+					<option value="">Option 2</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><code>.select</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;select name="" id="" class="select" data-placeholder="Test message">
+	&lt;option>&lt;/option>
+	&lt;option value="">Option 1&lt;/option>
+	&lt;option value="">Option 2&lt;/option>
+&lt;/select></code></pre>
+					<p>Кроме дата-атрибута необходимо прописать один пустой тег <code>option</code></p>
+					</div>
+				</td>
+				<td><select name="" id="" class="select" data-placeholder="Test message">
+					<option></option>
+					<option value="">Option 1</option>
+					<option value="">Option 2</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><code>.input-file</code></td>
+				<td>
+					<div class="overflow">
+						<pre><code>&lt;input type="file" id="fileID" class="input-file">&lt;label for="fileID">Выберите файл&lt;/label></code></pre>
+						<p>После файлового поля обязательно должен быть тег <code>label</code></p>
+					</div>
+				</td>
+				<td><input type="file" id="fileID" class="input-file"><label for="fileID">Выберите файл</label></td>
 			</tr>
 			<tr>
 				<td><code>.textarea</code></td>
@@ -207,5 +280,4 @@
 			</tr>
 		</table>
 	</div>
-</body>
-</html>
+//= template/footer.html

@@ -9,6 +9,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-stylus": "^2.6.0",

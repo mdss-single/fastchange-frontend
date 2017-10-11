@@ -22,6 +22,8 @@
 /*  <vars>  */
 $bdrs = 5px;
 $bgc = #fafafa;
+$mainColor = #535353;
+$secondColor = #000;
 /*  </vars>  */
 
 /*  <general>  */
@@ -32,7 +34,7 @@ body
 	display -o-flex
 	display flex
 	flex-direction column
-	color #535353
+	color $mainColor
 	font normal 1.5rem/1.3 Sregular, sans-serif;
 	background-color #fff
 	/*font-size-adjust .5*/
@@ -175,7 +177,7 @@ a
 .footer
 	flex-shrink 0
 	height 80px
-	color #000
+	color $secondColor
 	font-size 1.6rem
 	font-family 'Open Sans'
 	background-color $bgc
@@ -279,7 +281,10 @@ a
 			&:before
 				display none
 	&-col--data .change__section-title
-		color #000
+		color $secondColor
+	&-col--data
+		.input-text
+			height 40px
 	&-currency
 		display -webkit-flex
 		display -moz-flex
@@ -287,7 +292,7 @@ a
 		display -o-flex
 		display flex
 		justify-content center
-		color #000
+		color $secondColor
 		font-size 1.6rem
 		margin 25px 0 40px
 		&__radio
@@ -324,7 +329,7 @@ a
 			display -o-flex
 			display flex
 			position relative
-			color #000
+			color $secondColor
 			font-size 1.6rem
 			line-height 1
 			border-radius $bdrs
@@ -432,7 +437,7 @@ a
 	width 672px
 	padding 80px 130px 85px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		text-align center
 		margin 0 -20px 30px
@@ -447,8 +452,6 @@ a
 			display block
 			font-size 1.6rem
 			margin-bottom 10px
-	&__input
-		height 47px
 	&__btn
 		margin-top 38px
 /*  </refill-request>  */
@@ -459,13 +462,13 @@ a
 	padding 70px 152px 85px 98px
 	counter-reset:exchange
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		line-height 3.6rem
 		margin 0 0 50px
 	&__row
 		position relative
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		margin 0 0 30px 58px
 		&:before
@@ -501,7 +504,7 @@ a
 		.btn
 			padding 0 50px
 	&__cancel
-		color #000
+		color $secondColor
 		font-size 2rem
 		margin-left 50px
 /*  </exchange-finish>  */
@@ -512,7 +515,7 @@ a
 	background url('../i/request-complete__bg.png') no-repeat center 36px
 	padding 165px 65px 55px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		text-align center
 		margin 0 0 30px
@@ -534,7 +537,7 @@ a
 	text-align center
 	margin-top 135px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3.6rem
 		margin 0 0 30px
 	&__descr
@@ -564,7 +567,7 @@ a
 		&:last-child
 			margin-bottom 0
 	&-section__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 10px
 	&-section__sub
@@ -625,7 +628,7 @@ a
 	overflow hidden
 	margin-top 65px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 40px
 	&__nav
@@ -648,11 +651,11 @@ a
 		padding 10px 0
 		margin-right 50px
 		&:hover
-			color #000
+			color $secondColor
 			text-decoration none
 			border-color #208afe
 		&--active
-			color #000
+			color $secondColor
 			border-bottom 2px solid #208afe
 	&__item
 		max-width 566px
@@ -667,10 +670,10 @@ a
 			&:hover
 				text-decoration underline
 		&--active .faq__item-question
-			color #000
+			color $secondColor
 		&-answer
 			display none
-			color #000
+			color $secondColor
 			p
 				margin 0
 		&--active .faq__item-answer
@@ -687,16 +690,18 @@ a
 		text-decoration underline
 		&:hover
 			text-decoration none
-	.input-text
-		height 47px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 40px
 	&__row
 		margin-bottom 25px
 	&__btn
 		margin-top 45px
+	&__label
+		display block
+		font-size 1.6rem
+		margin-bottom 12px
 .auth__forgot
 	font-size 1.6rem
 	text-align center
@@ -712,11 +717,11 @@ a
 	margin 124px auto 0
 }
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 35px
 	&__descr
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		line-height 2.4rem
 		p
@@ -728,7 +733,7 @@ a
 	overflow hidden
 	margin-top 65px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 40px
 	&__list
@@ -745,13 +750,13 @@ a
 		font-size 1.4rem
 		margin-bottom 10px
 	&__item-name
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 15px
 	&__item-pic
 		margin-bottom 15px
 	&__item-text
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		line-height 2.4rem
 		p
@@ -760,7 +765,7 @@ a
 		max-width 630px
 		margin-top 40px
 	&__detail-text
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		line-height 2.4rem
 		text-align justify
@@ -771,7 +776,7 @@ a
 	max-width 850px
 	margin-top 60px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 -30px
 	&__item
@@ -786,7 +791,7 @@ a
 		&--widget
 			background-image url('../i/for-partners__widget.png')
 	&-item__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		line-height 1
 		margin 0 0 15px
@@ -801,7 +806,7 @@ a
 		padding 70px 0 86px
 		margin-top 110px
 	&__register-title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 25px
 	&__btn
@@ -814,7 +819,7 @@ a
 	margin-top 70px
 }
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 30px
 	&__block
@@ -925,7 +930,7 @@ a
 		justify-content flex-start
 		border-bottom 1px solid #e3e9f0
 	&-sort__item
-		color #535353
+		color $mainColor
 		font-size 1.7rem
 		border-bottom 2px solid transparent
 		padding-bottom 10px
@@ -934,7 +939,7 @@ a
 			margin-left 0
 		&:hover
 		&--active
-			color #000
+			color $secondColor
 			text-decoration none
 			border-color #208afe
 	&-period
@@ -968,7 +973,7 @@ a
 			&.focused .jq-selectbox__select
 				box-shadow inherit
 			.jq-selectbox__dropdown
-				color #535353
+				color $mainColor
 				font-family inherit
 				border 1px solid #e3e9f0
 				border-radius 0
@@ -997,7 +1002,7 @@ a
 		p
 			margin 0
 		&__number
-			color #000
+			color $secondColor
 			font-size 1.8rem
 			line-height 1.2
 		&__date
@@ -1028,7 +1033,7 @@ a
 				flex 1
 				margin-left 15px
 			&-value
-				color #000
+				color $secondColor
 				font-size 1.8rem
 				line-height 1.2
 			&-name
@@ -1057,14 +1062,14 @@ a
 			^[2]--error &-title
 				color #e24c4c
 			&-value
-				color #000
+				color $secondColor
 				font-size 1.3rem
 .request-ok
 	width 820px
 	background #fff url('../i/request-complete__bg.png') no-repeat 81px 83px / 42px auto
 	padding 85px 125px 84px 140px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0
 	&__descr
@@ -1084,7 +1089,7 @@ a
 		display flex
 		justify-content space-between
 		&-title
-			color #000
+			color $secondColor
 			font-size 2.2rem
 			margin 0 0 12px
 		&-date
@@ -1104,7 +1109,7 @@ a
 			flex 1
 			margin-left 15px
 		&-value
-			color #000
+			color $secondColor
 			font-size 1.8rem
 			line-height 1
 			margin 0
@@ -1118,11 +1123,11 @@ a
 .referal
 	margin-top 50px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 30px
 	&__descr
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		line-height 2.5rem
 		p
@@ -1155,13 +1160,13 @@ a
 			font-size 3rem
 			margin 0 0 12px
 		&-title
-			color #000
+			color $secondColor
 			font-size 1.7rem
 			margin 0
 	&__link
 		margin-top 40px
 		&-title
-			color #000
+			color $secondColor
 			font-size 1.7rem
 			margin 0 0 15px
 		&-main
@@ -1182,7 +1187,7 @@ a
 			padding 0 38px 0 18px
 	&__list
 		width 100%
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		tr
 			border-bottom 1px solid #dadada
@@ -1207,11 +1212,11 @@ a
 .promo
 	margin-top 50px
 	&__title
-		color #000
+		color $secondColor
 		font-size 3rem
 		margin 0 0 40px
 	&__descr
-		color #000
+		color $secondColor
 		font-size 1.7rem
 		line-height 2.5rem
 		margin-bottom 60px
@@ -1231,7 +1236,7 @@ a
 			margin-right 25px
 			cursor pointer
 			&--active
-				color #000
+				color $secondColor
 				font-family Smedium
 				border-bottom 0
 				cursor default
@@ -1245,7 +1250,7 @@ a
 			background-color #f1f4fa
 			margin-bottom 30px
 		&-title
-			color #000
+			color $secondColor
 			font-size 1.7rem
 			margin 0 0 10px
 		&-code
@@ -1261,3 +1266,147 @@ a
 				font-family Smedium
 				margin 0
 /*  </promo>  */
+
+/*  <settings>  */
+.settings
+	max-width 914px
+	margin-top 5px
+	&__section
+		border-bottom 1px solid #dadada
+		padding 45px 0 60px
+		&:last-child
+			border-bottom 0
+		&-title
+			color $secondColor
+			font-size 3rem
+			margin 0 0 20px
+	.form__row
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+	&__col
+		width 46%
+	.btn
+		padding 0 56px
+/*  </settings>  */
+
+/*  <cards>  */
+.cards
+	margin-top 50px
+	&__title
+		color $secondColor
+		font-size 3rem
+		margin 0 0 30px
+	&__list
+		width 100%
+		color $secondColor
+		font-size 1.7rem
+		margin-bottom 40px
+		tr
+			border-bottom 1px solid #dadada
+			&:last-child
+				border-bottom 0
+		th
+			font-weight normal
+			font-family Smedium
+		th
+		td
+			text-align left
+			padding 20px
+			&:first-child
+				padding-left 0
+			&:last-child
+				text-align right
+				padding-right 0
+	&__btn
+		height 38px
+		font-family Sregular
+		padding 0 44px
+	&__empty
+		position relative
+		text-align center
+		background url('../i/cards-empty.png') no-repeat center 0
+		padding-top 130px
+		margin-top 100px
+		&-title
+			color $secondColor
+			font-size 3.6rem
+			margin-bottom 70px
+		.btn
+			padding 0 38px
+.card-add
+	width 550px
+	padding 60px 130px 80px
+	&__title
+		color $secondColor
+		font-size 3rem
+		margin 0 0 45px
+	&__row
+		margin-top 35px
+	&__btn
+		margin-top 55px
+.card-verification
+	width 682px
+	padding 55px 90px 80px 135px
+	&__title
+		color $secondColor
+		font-size 3rem
+		margin 0 0 35px
+	&__descr
+		font-size 1.7rem
+		line-height 2.4rem
+		margin-bottom 30px
+		p
+			margin 0
+	&__requirement
+		font-size 1.7rem
+		line-height 2.4rem
+		margin-bottom 45px
+		&-title
+			color $secondColor
+			margin 0
+		&-list
+			color $secondColor
+			padding 0
+			margin 0
+			counter-reset requirement
+			li
+				list-style none
+				color $mainColor
+				&:before
+					color $secondColor
+					counter-increment requirement
+					content counter(requirement)". "
+	&__file
+		margin-top 45px
+		&-title
+			font-size 1.6rem
+			margin 0 0 10px
+		.input-file + label
+			width 270px
+	&__btn
+		margin-top 85px
+		.btn
+			padding 0 100px
+/*  </cards>  */
+
+/*  <activate>  */
+.activate
+	max-width 750px
+	text-align center
+	background url('../i/cabinet-activate.png') no-repeat center 0
+	padding-top 125px
+	margin 125px auto 0
+	&__title
+		color $secondColor
+		font-size 3.6rem
+		margin 0 0 30px
+	&__descr
+		font-size 1.7rem
+		line-height 2.4rem
+		p
+			margin 0
+/*  </activate>  */

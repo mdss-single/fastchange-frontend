@@ -46,21 +46,64 @@
 		</div>
 	</header>
 	<main class="main">
+		<div class="cabinet__header">
+			<nav class="cabinet__nav full">
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--requests">Мои заявки</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--cards">Мои карты</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--referal">Реферальная программа</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--promo cabinet-nav__item--active">Промо материалы</a>
+				<a href="#" class="cabinet-nav__item cabinet-nav__item--settings">Настройки</a>
+			</nav>
+		</div>
 		<div class="full">
-			<div class="form">
-				<p class="form__title">Войти</p>
-				<div class="form__row">
-					<input type="email" class="input-text input-text--email" placeholder="E-mail">
+			<div class="cards">
+				<div class="cards__empty">
+					<p class="cards__empty-title">У вас пока нет ни одной карты</p>
+					<button class="btn js-modal" data-src="#cardAdd">Добавить карту</button>
 				</div>
-				<div class="form__row">
-					<input type="password" class="input-text input-text--password" placeholder="Пароль">
-				</div>
-				<div class="form__btn">
-					<button class="btn btn--middle btn--fullwidth">Войти в Личный кабинет</button>
-				</div>
-				<div class="auth__forgot">
-					<a href="#">Забыли пароль ?</a>
-				</div>
+			</div>
+		</div>
+		<div class="modal card-add" id="cardAdd">
+			<p class="card-add__title">Добавить карту</p>
+			<div class="card-add__row">
+				<label for="ca1" class="form__label">Выберите банк:</label>
+				<select name="" id="ca1" class="select">
+					<option value="">Сбербанк</option>
+					<option value="">ВТБ 24</option>
+					<option value="">Промсвязьбанк</option>
+				</select>
+			</div>
+			<div class="card-add__row">
+				<label for="ca2" class="form__label">Введите ФИО владельца карты:</label>
+				<input type="text" name="" id="ca2" class="input-text input-text--user">
+			</div>
+			<div class="card-add__row">
+				<label for="ca3" class="form__label">Введите номер карты:</label>
+				<input type="text" name="" id="ca3" class="input-text input-text--card js-creditcard-mask">
+			</div>
+			<div class="card-add__btn">
+				<button class="btn btn--fullwidth">Далее</button>
+			</div>
+		</div>
+		<div class="modal card-verification" id="cardVerification">
+			<p class="card-verification__title">Верификация карты</p>
+			<div class="card-verification__descr">
+				<p>Для верификации необходимо сфотографировать только лицевую сторону Вашей карты на фоне нашего сайта.</p>
+				<p>Процесс верификации займет несколько минут и требуется лишь единожды на каждую новую карту.</p>
+			</div>
+			<div class="card-verification__requirement">
+				<p class="card-verification__requirement-title">Требование к фотографии:</p>
+				<ol class="card-verification__requirement-list">
+					<li>На фото должны читаться номер карты, имя владельца.</li>
+					<li>На заднем фоне (за картой) должен быть виден монитор с</li>
+				</ol>
+			</div>
+			<div class="card-verification__file">
+				<p class="card-verification__file-title">Нажмите чтобы выбрать:</p>
+				<input type="file" name="" id="ca4" class="input-file"><label for="ca4">Выбрать файл</label>
+			</div>
+			<div class="card-verification__btn">
+				<button class="btn">Отправить</button>
 			</div>
 		</div>
 	</main>

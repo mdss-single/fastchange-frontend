@@ -1,3 +1,5 @@
+//yarn add gulp gulp-watch gulp-uglify gulp-stylus gulp-sourcemaps gulp-rigger gulp-clean-css gulp-concat rimraf browser-sync
+
 'use strict';
 
 var gulp = require('gulp'),
@@ -6,6 +8,7 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	sourcemaps = require('gulp-sourcemaps'),
 	rigger = require('gulp-rigger'),
+	plumber = require('gulp-plumber'),
 	cssMin = require('gulp-clean-css'),
 	concat = require('gulp-concat'),
 	rimraf = require('rimraf'),
@@ -64,6 +67,7 @@ gulp.task('js:build', function() {
 });
 gulp.task('style:build', function() {
 	gulp.src(path.src.css)
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(stylus())
 		.pipe(cssMin({compatibility: 'ie8'}))
