@@ -1,4 +1,4 @@
-//yarn add gulp gulp-watch gulp-uglify gulp-stylus gulp-sourcemaps gulp-rigger gulp-clean-css gulp-concat rimraf browser-sync
+//yarn add gulp gulp-watch gulp-uglify gulp-stylus gulp-sourcemaps gulp-rigger gulp-plumber gulp-clean-css gulp-concat rimraf browser-sync
 
 'use strict';
 

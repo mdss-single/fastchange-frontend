@@ -38,7 +38,7 @@
 		$(this).closest('.faq__item').toggleClass('faq__item--active').siblings().removeClass('faq__item--active');
 	});
 
-	$('.select').styler();
+	$('.select, .checkbox, .radio').styler();
 
 	$('.promo__tabs').each(function(i) {
 		var storage = localStorage.getItem('tab' + i);
@@ -80,7 +80,5 @@
 		errorClass: "input-text--error",
 		wrapper: "div",
 	});
-
-	console.log('%c Верстка: mdss@makexhtml.ru ', 'color:#fff;font-size:1.2rem;background-color:#3469c6;')
 
 })(jQuery);
